@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b19" />
+      <stop offset="45%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.9" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85" />
+    </linearGradient>
+
+    <!-- Glowing filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="20" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.4" />
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes pulseOrb {
+      0%, 100% { opacity: 0.25; transform: scale(1); }
+      50% { opacity: 0.55; transform: scale(1.15); }
+    }
+    @keyframes floatCard1 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes floatCard2 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(8px); }
+    }
+    @keyframes streamLine {
+      0% { stroke-dashoffset: 120; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes radarPulse {
+      0% { r: 10; opacity: 0.8; }
+      100% { r: 55; opacity: 0; }
+    }
+    .orb-glow { animation: pulseOrb 6s ease-in-out infinite alternate; transform-origin: center; }
+    .floating-1 { animation: floatCard1 5s ease-in-out infinite; }
+    .floating-2 { animation: floatCard2 6s ease-in-out infinite; }
+    .signal-pulse { animation: radarPulse 3s cubic-bezier(0.2, 0.8, 0.2, 1) infinite; }
+    .stream-path {
+      stroke-dasharray: 8 8;
+      animation: streamLine 4s linear infinite;
+    }
+  </style>
+
+  <!-- Deep Cosmic Background -->
+  <rect width="1200" height="420" fill="url(#bgGrad)" />
+
+  <!-- Subtle Blueprint Tech Grid -->
+  <rect width="1200" height="420" fill="url(#grid)" />
+
+  <!-- Ambient Dynamic Glowing Orbs in the Background (Behind text) -->
+  <circle cx="150" cy="100" r="140" fill="#0284c7" opacity="0.2" class="orb-glow" filter="url(#softGlow)" />
+  <circle cx="1050" cy="300" r="160" fill="#7c3aed" opacity="0.22" class="orb-glow" filter="url(#softGlow)" />
+  <circle cx="600" cy="360" r="120" fill="#38bdf8" opacity="0.12" class="orb-glow" filter="url(#softGlow)" />
+
+  <!-- Animated Data Streams Connecting Floating Security Nodes -->
+  <g opacity="0.45">
+    <path class="stream-path" d="M 80,320 Q 250,220 450,330 T 800,280 T 1120,320" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+    <path class="stream-path" d="M 120,90 Q 320,160 550,80 T 980,120 T 1150,70" fill="none" stroke="#818cf8" stroke-width="1.2" />
+  </g>
+
+  <!-- Ambient Floating Graphic Elements (Left & Right - Not blocking center title) -->
+  <!-- Left Side: Encrypted Signal Protocol Beacon -->
+  <g class="floating-1" transform="translate(60, 130)">
+    <rect width="180" height="70" rx="14" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="1.2" filter="url(#glow)" stroke-opacity="0.6" />
+    <circle cx="36" cy="35" r="16" fill="#0369a1" />
+    <circle cx="36" cy="35" r="8" fill="#38bdf8" />
+    <circle cx="36" cy="35" r="24" fill="none" stroke="#38bdf8" class="signal-pulse" stroke-width="1.5" />
+    <text x="66" y="30" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="13">E2EE Protocol</text>
+    <text x="66" y="48" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="500" font-size="11">MLS &amp; Double Ratchet</text>
+  </g>
+
+  <!-- Right Side: Sovereign Federated Matrix Node -->
+  <g class="floating-2" transform="translate(960, 130)">
+    <rect width="180" height="70" rx="14" fill="url(#cardGrad)" stroke="#818cf8" stroke-width="1.2" filter="url(#glow)" stroke-opacity="0.6" />
+    <circle cx="36" cy="35" r="16" fill="#4338ca" />
+    <!-- Matrix Icon style symbol -->
+    <path d="M 30,26 L 26,26 L 26,44 L 30,44 M 42,26 L 46,26 L 46,44 L 42,44 M 32,32 L 36,36 L 40,32" stroke="#a5b4fc" stroke-width="1.8" fill="none" stroke-linecap="round" />
+    <text x="66" y="30" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="13">Federation Ready</text>
+    <text x="66" y="48" fill="#a5b4fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="500" font-size="11">Matrix [m] / Sovereign</text>
+  </g>
+
+  <!-- Left Bottom Floating Metric -->
+  <g class="floating-2" transform="translate(90, 240)">
+    <rect width="140" height="50" rx="10" fill="url(#cardGrad)" stroke="#10b981" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="26" cy="25" r="6" fill="#10b981" />
+    <text x="44" y="24" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="11">Air-Gap Ready</text>
+    <text x="44" y="38" fill="#6ee7b7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="500" font-size="9">Zero Cloud Leak</text>
+  </g>
+
+  <!-- Right Bottom Floating Metric -->
+  <g class="floating-1" transform="translate(980, 240)">
+    <rect width="140" height="50" rx="10" fill="url(#cardGrad)" stroke="#f43f5e" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="26" cy="25" r="6" fill="#f43f5e" />
+    <text x="44" y="24" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="11">100% Auditable</text>
+    <text x="44" y="38" fill="#fda4af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="500" font-size="9">Open Source Core</text>
+  </g>
+
+  <!-- Central Foreground Shield / Lock Emblem (Safe, Unobstructed) -->
+  <g transform="translate(568, 52)" filter="url(#glow)">
+    <rect width="64" height="64" rx="20" fill="url(#shieldGrad)" />
+    <!-- Lock / Security Vector -->
+    <path d="M 32,20 C 27,20 23,24 23,29 L 23,33 L 21,33 C 19.9,33 19,33.9 19,35 L 19,45 C 19,46.1 19.9,47 21,47 L 43,47 C 44.1,47 45,46.1 45,45 L 45,35 C 45,33.9 44.1,33 43,33 L 41,33 L 41,29 C 41,24 37,20 32,20 Z M 32,24 C 34.8,24 37,26.2 37,29 L 37,33 L 27,33 L 27,29 C 27,26.2 29.2,24 32,24 Z" fill="#ffffff" />
+  </g>
+
+  <!-- FOREGROUND TEXT (Always 100% Crisp, High Contrast, Layered on Top) -->
+  <!-- Top Category Pill -->
+  <g transform="translate(425, 134)">
+    <rect width="350" height="28" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="175" y="19" text-anchor="middle" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="700" letter-spacing="1.5">ENTERPRISE COLLABORATION &amp; SECURITY</text>
+  </g>
+
+  <!-- Main Headline Title -->
+  <text x="600" y="210" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="44" letter-spacing="-0.5">
+    Secure Messaging &amp; Collaboration
+  </text>
+
+  <!-- Subtitle with Glowing Accent Gradient -->
+  <text x="600" y="250" text-anchor="middle" fill="url(#accentGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="20" letter-spacing="0.2">
+    Curated Sovereign Workspaces, E2EE Platforms &amp; Federated Chat Protocols
+  </text>
+
+  <!-- Tagline Summary -->
+  <text x="600" y="284" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="400" font-size="14">
+    Comprehensive benchmark of SaaS giants, air-gapped systems, and top open-source projects
+  </text>
+
+  <!-- Feature Pills Row (Centered, Bottom Foreground) -->
+  <g transform="translate(230, 325)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="135" height="34" rx="17" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.7" />
+    <text x="67" y="21" text-anchor="middle" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="12">🛡️ E2EE &amp; MLS</text>
+
+    <!-- Pill 2 -->
+    <rect x="150" y="0" width="140" height="34" rx="17" fill="#1e293b" stroke="#818cf8" stroke-width="1.2" stroke-opacity="0.7" />
+    <text x="220" y="21" text-anchor="middle" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="12">🌐 Matrix Protocol</text>
+
+    <!-- Pill 3 -->
+    <rect x="305" y="0" width="140" height="34" rx="17" fill="#1e293b" stroke="#a855f7" stroke-width="1.2" stroke-opacity="0.7" />
+    <text x="375" y="21" text-anchor="middle" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="12">🏰 Self-Hosted</text>
+
+    <!-- Pill 4 -->
+    <rect x="460" y="0" width="135" height="34" rx="17" fill="#1e293b" stroke="#10b981" stroke-width="1.2" stroke-opacity="0.7" />
+    <text x="527" y="21" text-anchor="middle" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="12">🔒 Air-Gapped</text>
+
+    <!-- Pill 5 -->
+    <rect x="610" y="0" width="130" height="34" rx="17" fill="#1e293b" stroke="#f59e0b" stroke-width="1.2" stroke-opacity="0.7" />
+    <text x="675" y="21" text-anchor="middle" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="12">📊 SaaS Pricing</text>
+  </g>
+</svg>
