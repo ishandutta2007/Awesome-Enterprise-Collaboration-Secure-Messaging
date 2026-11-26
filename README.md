@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Enterprise-Collaboration-Secure-Messaging/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Enterprise-Collaboration-Secure-Messaging?style=social" alt="GitHub stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Enterprise-Collaboration-Secure-Messaging/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Enterprise-Collaboration-Secure-Messaging?style=social" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Enterprise-Collaboration-Secure-Messaging/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Enterprise-Collaboration-Secure-Messaging?style=social" alt="GitHub forks" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </p>
@@ -72,9 +72,9 @@ The mainstream corporate cloud market exhibits **strong winner-take-most consoli
 
 ## 💻 Open-Source GitHub Projects
 
-*Sorted descending by repository GitHub star counts. All badges link directly to the repository stargazers page.*
+*Sorted descending by repository GitHub Stars_Counts. All badges link directly to the repository stargazers page.*
 
-| Project & Repository | Stars | License | Self-Hosted / Free Forever Limits | Architectural Focus & Capabilities |
+| Project & Repository | GitHub_Stars | License | Self-Hosted / Free Forever Limits | Architectural Focus & Capabilities |
 | :--- | :---: | :---: | :--- | :--- |
 | **[Rocket.Chat](https://github.com/RocketChat/Rocket.Chat)** | [![Stars](https://img.shields.io/github/stars/RocketChat/Rocket.Chat?style=social&color=white)](https://github.com/RocketChat/Rocket.Chat/stargazers) | Source-Available / MIT core | **100% Free self-hosted** Community Edition (up to 50 active users, unlimited messages & channels) | 🚀 Full-featured enterprise communications hub supporting omni-channel customer service, Matrix protocol federation, and voice/video integrations. |
 | **[Mattermost](https://github.com/mattermost/mattermost)** | [![Stars](https://img.shields.io/github/stars/mattermost/mattermost?style=social&color=white)](https://github.com/mattermost/mattermost/stargazers) | AGPLv3 / MIT / Source-Available | **100% Free forever** self-hosted Team Edition (unlimited users, unlimited channels, full history) | 🛡️ Self-hosted Slack alternative for technical, security, and defense teams with Playbooks, Boards, and deep DevSecOps tooling. |
@@ -106,7 +106,7 @@ We welcome additions, updates, and corrections from the community! 🤝
 
 1. 🍴 Fork this repository.
 2. 🌿 Create a descriptive branch: `git checkout -b add-new-platform`.
-3. 📝 Add your entry to the appropriate section maintaining markdown formatting, pricing accuracy, and star badges.
+3. 📝 Add your entry to the appropriate section maintaining markdown formatting, pricing accuracy, and Stars_Badges.
 4. 🚀 Open a Pull Request with verifiable documentation or official website references.
 
 ---
